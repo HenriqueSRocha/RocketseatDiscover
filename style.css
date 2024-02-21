@@ -19,7 +19,6 @@ body * {
   font-family: "Inter", sans-serif;
 }
 #container {
-  border: 1px solid red;
   width: 360px;
   margin: 56px auto 0px auto;
 }
@@ -27,12 +26,33 @@ body * {
   text-align: center;
   padding: 24px;
 }
-#profile p {
-  font-weight: 500px;
-  line-height: 24px;
-}
 #profile img {
   width: 112px;
   display: block;
   margin: auto;
+}
+#profile p {
+  font-weight: 500px;
+  line-height: 24px;
+}
+/* Links */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ul li a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: bold;
 }
