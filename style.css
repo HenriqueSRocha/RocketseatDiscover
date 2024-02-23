@@ -3,15 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --text-color: white;
   --bg-url: url(./assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
-  --surface-color-hover: rgba(255, 255, 255, 0.02)
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/MoonStars.svg)
 }
+
 .light {
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-light.jpg);
@@ -20,7 +22,6 @@
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/Sun.svg)
-
 }
 
 body {
@@ -34,25 +35,29 @@ body {
   background: var(--bg-url) no-repeat top center/cover;
   height: 100vh;
 }
+
 body * {
   color: var(--text-color);
   font-family: "Inter", sans-serif;
 }
+
 #container {
   width: 100%;
   max-width: 588px;
-  margin: 56px auto 0px auto;
+  margin: 56px auto 0px;
   padding: 0 24px;
 }
-/* profile*/
 
+/* profile*/
 #profile {
   text-align: center;
   padding: 24px;
 }
+
 #profile img {
   width: 112px;
 }
+
 #profile p {
   font-weight: 500px;
   line-height: 24px;
@@ -63,7 +68,7 @@ body * {
 #switch{
   position: relative;
   width: 64px;
-  margin: 3px auto;
+  margin: 4px auto;
 }
 
 #switch button {
@@ -82,16 +87,13 @@ body * {
   animation: slide-out 0.3s;
 }
 
-#switch button:hover{
-  outline: 8px solid var(--highlight-color);
-
-}
-
 .light #switch button{
   animation: slide-in 0.3s forwards;
 }
 
-
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
+}
 
 #switch span{
   display: block;
@@ -104,14 +106,13 @@ body * {
   border-radius: 9999px;
 }
 
-
 /* Links */
 ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 24px;
+  padding: 24px 0;
 }
 
 ul li a{
@@ -129,15 +130,16 @@ ul li a{
   -webkit-backdrop-filter: blur(4px);
 
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500px;
 
   transition: background 0.2s;
 }
 
 ul li a:hover{
   background: var(--surface-color-hover);
-  border: 1px solid var(--text-color);
+  border: 1.5px solid var(--text-color);
 }
+
 #social-links{
   display: flex;
   justify-content: center;
@@ -146,6 +148,7 @@ ul li a:hover{
 
   font-size: 24px;
 }
+
 #social-links a{
   display: flex;
   align-items: center;
@@ -154,11 +157,12 @@ ul li a:hover{
 
   transition: background 0.2s;
   border-radius: 50%;
-
 }
+
 #social-links a:hover{
   background: var(--highlight-color);
 }
+
 footer {
   padding: 24px 0;
   text-align: center;
@@ -184,6 +188,7 @@ footer {
     left: 50%;
   }
 }
+
 @keyframes slide-out {
   from{
     left: 50%;
